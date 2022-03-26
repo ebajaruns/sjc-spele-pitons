@@ -60,8 +60,14 @@ def SakumaIzvelne():
 # iztīra sēņu masīvus un uzģenēr jaunus, tad izsauc 1.funkciju "spēlētājs" )
 # 3.funkcija (ietvars spēlei...)
 
-
-
+def Grutibasmenu():
+    print("Grutibas menu")
+    global menu1, menu
+    menu1 = logs.create_rectangle(250, 500, 450, 500, fill="white", outline="blue")
+    menu = logs.create_text(350, 350,  font=(None, 50), text="Grutibas menu")
+    logs.tag_bind(menu1, "<Button-1>", nospiests)
+    logs.tag_bind(menu, "<Button-1>", nospiests)
+ 
 def nospiests(none):
     print("nospiests")
     logs.delete(menu1)
@@ -105,7 +111,7 @@ def punkti():
             rezultats = rezultats +1
             senesst[i]= senesst[i] + 1
                     
-    if rezultats == uzvpunkti :
+    if rezultats == 10 :
         # šis notiek kad "tiek savākti 10 punkti" - parādās "Spēle uzvarēta", kuru nospiežot tiek izsaukta funkcija "nospiests" - principā spēle resetojas!!!
         global uzvarteksts, uzvarteksts1
         uzvarteksts1 = logs.create_rectangle(150, 400, 750, 500, fill="white", outline="blue")
@@ -119,7 +125,7 @@ def rezultatutablo():
     buttonBG = logs.create_rectangle(100, 0, 200, 30, fill="red", outline="grey60")
     buttonTXT = logs.create_text(150, 15,  font=(None, 25), text=rezultats)
 
-uzvpunkti = 10
+
 
 #KUSTĪBA _ staigājam apkārt... (Šīs 3 tālākas funkcijas vislaik ir aktīvas :) bet faktiski izpildās, tad gad mums ir "globālais player" - funkcija spēlētājs, 
 # funkcija spēlētājs tiek izsaukta "funkcijā nospiests"
