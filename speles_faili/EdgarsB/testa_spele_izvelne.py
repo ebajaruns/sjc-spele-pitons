@@ -26,9 +26,14 @@ master.title("Līnijas spēle")
 logs.pack()
 
 #Fona attēla iestatīšana... (svarīgs izmērs - der PNG) (FONS ir globāls mainīgais)
-fons = PhotoImage(file="speles_faili\EdgarsB\mezs_sss.png")
+#fons = PhotoImage(file="speles_faili\EdgarsB\mezs.jpg")
 
-
+bildek2 = Image.open("speles_faili\EdgarsB\sark_liela.png")
+izmerso = bildek2.size
+print(bildek2.size)
+bildek2 = bildek2.resize((izmerso[0] // 2, izmerso[1] // 2 ))
+print(bildek2.size)
+fons = ImageTk.PhotoImage(bildek2) 
 #Izveidojam spēlētāju (bilde (globāls mainīgais))
 
 
@@ -41,9 +46,9 @@ sarkG = PhotoImage(file="speles_faili\EdgarsB\sark_videja.ppm")
 # mushroom = mushroom.resize((MushSiz[0] // mushM, MushSiz[1] // mushM))
 # seene = ImageTk.PhotoImage(mushroom)
 # Bildes skeilošana saglabājot PNG (fons tīrs) -
+# bildes orģinālais izmērs = bildes izmēru (un to izmēru pasakaa bibliotēka)
 dalitajs = 10
 bildek = Image.open("speles_faili\EdgarsB\zeltsss.png")
-# bildes orģinālais izmērs = bildes izmēru (un to izmēru pasakaa bibliotēka)
 izmerso = bildek.size
 print(bildek.size)
 bildek = bildek.resize((izmerso[0] // dalitajs, izmerso[1] // dalitajs ))
