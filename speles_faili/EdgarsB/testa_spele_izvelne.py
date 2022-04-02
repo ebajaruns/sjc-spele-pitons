@@ -1,5 +1,6 @@
 from calendar import c
 from tkinter import *
+from PIL import Image, ImageTk, ImageOps
 import random
 
 from numpy import true_divide
@@ -64,7 +65,7 @@ def SakumaIzvelne(reize):
     pass
     logs.delete("all")
     print("Starta menu")
-    global menu1, menu, menu2, menu3, rezultats
+    global menu1, menu, menu2, menu3, rezultats, menu4, menu5
     rezultats = 0
     menu1 = logs.create_rectangle(150, 300, 750, 400, fill="white", outline="blue")
     menu = logs.create_text(450, 350,  font=(None, 50), text="SĀKT SPĒLI")
