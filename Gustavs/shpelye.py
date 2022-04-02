@@ -1,5 +1,7 @@
 from tkinter import *
+
 from PIL import Image, ImageTk, ImageOps
+
 import random
 from playsound import *
 import threading

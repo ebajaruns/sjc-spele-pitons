@@ -1,9 +1,9 @@
-from calendar import c
+
 from tkinter import *
-from PIL import Image, ImageTk, ImageOps
+from PIL import Image, ImageTk
 import random
-from numpy import true_divide
-from sklearn.preprocessing import PolynomialFeatures
+# from numpy import true_divide
+# from sklearn.preprocessing import PolynomialFeatures
 canvas_width = 900
 canvas_height = 900
 master = Tk()
@@ -30,6 +30,8 @@ fons = PhotoImage(file="speles_faili\EdgarsB\mezs_sss.png")
 
 
 #Izveidojam spēlētāju (bilde (globāls mainīgais))
+
+
 sarkG = PhotoImage(file="speles_faili\EdgarsB\sark_videja.ppm")
 
 # SĒNES (Globāls mainīgais)
@@ -38,10 +40,14 @@ sarkG = PhotoImage(file="speles_faili\EdgarsB\sark_videja.ppm")
 # MushSiz = mushroom.size
 # mushroom = mushroom.resize((MushSiz[0] // mushM, MushSiz[1] // mushM))
 # seene = ImageTk.PhotoImage(mushroom)
-# dalitajs = 10
+# Bildes skeilošana saglabājot PNG (fons tīrs) -
+dalitajs = 10
 bildek = Image.open("speles_faili\EdgarsB\zeltsss.png")
+# bildes orģinālais izmērs = bildes izmēru (un to izmēru pasakaa bibliotēka)
 izmerso = bildek.size
-bildek = bildek.resize((izmerso[0] // 10, izmerso[1] // 10 ))
+print(bildek.size)
+bildek = bildek.resize((izmerso[0] // dalitajs, izmerso[1] // dalitajs ))
+print(bildek.size)
 sene = ImageTk.PhotoImage(bildek) 
 
 # UZTAISĪT sēnes (mainot masīva izmēru var veidot vairāk sēnes (arī globāls mainīgais))!!!!
