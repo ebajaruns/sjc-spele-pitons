@@ -2,7 +2,6 @@ from calendar import c
 from tkinter import *
 from PIL import Image, ImageTk, ImageOps
 import random
-
 from numpy import true_divide
 from sklearn.preprocessing import PolynomialFeatures
 canvas_width = 900
@@ -34,7 +33,16 @@ fons = PhotoImage(file="speles_faili\EdgarsB\mezs_sss.png")
 sarkG = PhotoImage(file="speles_faili\EdgarsB\sark_videja.ppm")
 
 # SĒNES (Globāls mainīgais)
-sene = PhotoImage(file="speles_faili\EdgarsB\semene.ppm") 
+# mushM = 12
+# mushroom = Image.open('gustavs/assets/Mushroom.png')
+# MushSiz = mushroom.size
+# mushroom = mushroom.resize((MushSiz[0] // mushM, MushSiz[1] // mushM))
+# seene = ImageTk.PhotoImage(mushroom)
+# dalitajs = 10
+bildek = Image.open("speles_faili\EdgarsB\zeltsss.png")
+izmerso = bildek.size
+bildek = bildek.resize((izmerso[0] // 10, izmerso[1] // 10 ))
+sene = ImageTk.PhotoImage(bildek) 
 
 # UZTAISĪT sēnes (mainot masīva izmēru var veidot vairāk sēnes (arī globāls mainīgais))!!!!
 xkoordinates = []
