@@ -1,19 +1,10 @@
-from ast import While
-import threading, time
+from PIL import Image, ImageTk
 
-def xx():
-    time.sleep(5)
-    i = 0
-    while True:
-        print(f'i: {i}')
-        i += 1
-x = threading.Thread(target=xx, daemon=False)
+def imagess(path, ImageSizeModifier):
+    tempp = Image.open(path)
+    tempp = tempp.resize((tempp.size[0] // ImageSizeModifier, tempp.size[1] // ImageSizeModifier))
+    return ImageTk.PhotoImage(tempp)
 
-x.start()
-h = 0
-print('yo')
-time.sleep(1)
-while True:
-    print(f'h: {h}')
-    h += 1
-
+bildite = imagess('path', 0.1)
+# piemers
+# bildite = imagess('Gustavs/assets/sss.png', 0.1)
