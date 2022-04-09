@@ -28,12 +28,13 @@ logs.pack()
 #Fona attēla iestatīšana... (svarīgs izmērs - der PNG) (FONS ir globāls mainīgais)
 #fons = PhotoImage(file="speles_faili\EdgarsB\mezs.jpg")
 
-bildek2 = Image.open("speles_faili\EdgarsB\sark_liela.png")
-izmerso = bildek2.size
-print(bildek2.size)
-bildek2 = bildek2.resize((izmerso[0] // 2, izmerso[1] // 2 ))
-print(bildek2.size)
+bildek2 = Image.open("speles_faili\EdgarsB\mezs234.png")
+platums = 900
+augstums = 700
+bildek2=bildek2.resize((platums, augstums), Image.ANTIALIAS) 
 fons = ImageTk.PhotoImage(bildek2) 
+
+
 #Izveidojam spēlētāju (bilde (globāls mainīgais))
 
 
@@ -139,7 +140,7 @@ def nospiests(none):
     print("nospiests")
     logs.delete("all")
     global xkoordinates, ykoordinates, senes, senesst,sene, fons, sarkG
-    logs.create_image(0,0, image=fons)
+    logs.create_image(450,450, image=fons)
     xkoordinates.clear()
     ykoordinates.clear()
     senes.clear()
