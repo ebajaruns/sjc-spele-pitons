@@ -63,7 +63,10 @@ senesst = []
 senes = []
 
 # jāuztaisa ļaunie :) (tiekas uzbruks sarkangalvītei) >>>???
-
+xlauns = []
+ylauns = []
+launste = []
+launs = []
 
 
 #tukšie mainīgie (kas vēlāk tiek "apdzīvoti" (tie vēlāk vajadzīgi, lai izsauktu metodēs))
