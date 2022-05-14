@@ -66,7 +66,6 @@ senes = []
 xlauns = []
 ylauns = []
 launste = []
-launs = []
 
 
 #tukšie mainīgie (kas vēlāk tiek "apdzīvoti" (tie vēlāk vajadzīgi, lai izsauktu metodēs))
